@@ -27,6 +27,7 @@ function number_format(number, decimals, dec_point, thousands_sep) {
   return s.join(dec);
 }
 
+//기존소스  
 //// Area Chart Example
 //var ctx = document.getElementById("myAreaChart");
 //var myLineChart = new Chart(ctx, {
@@ -117,7 +118,7 @@ function number_format(number, decimals, dec_point, thousands_sep) {
 //  }
 //});
 
-
+//blazor에서 호출할 수 있도록 객체 id를 받아 chart를 표시하는 펑션 생성.
 window.BLazorChart_area_demo = function (id) {
 
     var ctx = document.getElementById(id);
