@@ -12,7 +12,7 @@
     <link href="HyeongGyu_Project.Admin.styles.css" rel="stylesheet" />
     <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
 
-    
+
     <!--여기서 부터 clone 사이트 내용 복사-->
     <title>HyeongGyu-AdiminPage</title>
 
@@ -20,7 +20,22 @@
     <script src="_content/MatBlazor/dist/matBlazor.js"></script>
     <link href="_content/MatBlazor/dist/matBlazor.css" rel="stylesheet" />
 
+    <script>
+        function BlazorScrollToId(id) {
+            const element = document.getElementById(id);
+            if (element instanceof HTMLElement) {
+                element.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                    inline: "nearest"
+                });
+            }
+        }
+    </script>
+
+
 </head>
+
 
 
 <body id="page-top">
@@ -104,21 +119,21 @@
             <!--<div id="collapseDemo" class="collapse" aria-labelledby="headingPages" 에서 id를 변경하지 않고 그대로 사용 하면 기존 메뉴와 동시에 동작됨.-->
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseDemo"<!--변경--> aria-expanded="true"
-                   aria-controls="collapseDemo"<!--변경-->>
+                <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseDemo" @* <!--변경--> *@ aria-expanded="true"
+                   aria-controls="collapseDemo">
+                    @* <!--변경--> *@
                     <i class="fas fa-fw fa-folder"></i>
-                    <span>Samples<!--변경--></span>
+                    <span>Samples@* <!--변경--> *@</span>
                 </a>
-                <div id="collapseDemo"<!--변경--> class="collapse" aria-labelledby="headingPages"
+                <div id="collapseDemo" @* <!--변경--> *@ class="collapse" aria-labelledby="headingPages"
                      data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">LECTURE SAMPLES:</h6>
-                        <a class="collapse-item" href="/Samples/TodoListInMemory">TodoListInMemory</a><!--변경-->
-                        <a class="collapse-item" href="/Pages/Register">Register</a>
-                        <a class="collapse-item" href="/Pages/ForgotPassword">Forgot Password</a>
+                        <a class="collapse-item" href="/Samples/TodoListInMemory">TodoListInMemory</a>@* <!--변경--> *@
+                        <a class="collapse-item" href="/Samples/TabDemo">Tab</a>
                         <div class="collapse-divider"></div>
                         <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="/Pages/NotFoundPage">404 Page</a>
+                        <a class="collapse-item" href="/Samples/Test">404 Page</a>
                         <a class="collapse-item" href="/Pages/BlankPage">Blank Page</a>
                     </div>
                 </div>
@@ -398,7 +413,7 @@
                 <!-- End of Topbar -->
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                    
+
                     @RenderBody()
 
                 </div>
@@ -447,7 +462,7 @@
     </div>
 
     <script src="_framework/blazor.server.js"></script>
-    
+
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -455,7 +470,7 @@
 
     <!-- Core plugin JavaScript-->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    
+
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>

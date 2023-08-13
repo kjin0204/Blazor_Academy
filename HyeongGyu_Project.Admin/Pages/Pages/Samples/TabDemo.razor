@@ -1,0 +1,86 @@
+﻿@page "/Samples/TabDemo"
+
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button>
+    </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">tab1</div>
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">tab2</div>
+    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">tab3</div>
+</div>
+
+<hr />
+
+
+<ul class="nav nav-tabs" id="myTab2" role="tablist">
+    <li class="nav-item" role="presentation">
+        <button class="nav-link @tab1Active" @onclick=@(() => Clicked(1) )>Home</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link @tab2Active" @onclick=@(() => Clicked(2))>Home</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link @tab3Active" @onclick=@(() => Clicked(3))>Contact</button>
+    </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade @tabPanle1Active" id="home" role="tabpanel" aria-labelledby="home-tab">tab1</div>
+    <div class="tab-pane fade @tabPanle2Active" id="profile" role="tabpanel" aria-labelledby="profile-tab">tab2</div>
+    <div class="tab-pane fade @tabPanle3Active" id="contact" role="tabpanel" aria-labelledby="contact-tab">tab3</div>
+</div>
+
+
+@code {
+    string tab1Active = "active";
+    string tab2Active = "";
+    string tab3Active = "";
+
+    string tabPanle1Active = "show active";
+    string tabPanle2Active = "";
+    string tabPanle3Active = "";
+
+    public void Clicked(int i )
+    {
+        switch(i)
+        {
+            case 1:
+                tab1Active = "active";
+                tab2Active = "";
+                tab3Active = "";
+
+                tabPanle1Active = "show active";
+                tabPanle2Active = "";
+                tabPanle3Active = "";
+                break;
+            case 2:
+                tab1Active = "";
+                tab2Active = "active";
+                tab3Active = "";
+
+                tabPanle1Active = "";
+                tabPanle2Active = "show active";
+                tabPanle3Active = "";
+                break;
+            case 3:
+                tab1Active = "";
+                tab2Active = "";
+                tab3Active = "active";
+
+                tabPanle1Active = "";
+                tabPanle2Active = "";
+                tabPanle3Active = "show active";
+                break;
+        }
+    }
+
+
+
+}

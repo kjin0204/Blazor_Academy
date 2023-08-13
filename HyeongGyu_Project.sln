@@ -9,13 +9,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HyeongGyu_Project.Admin", "
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "HyeongGyu_Project.SqlServer", "HyeongGyu_Project.SqlServer\HyeongGyu_Project.SqlServer.sqlproj", "{E03103C6-B088-431D-8642-FE9EF6536DCD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HyeongGyu_Project.Models", "HyeongGyu_Project.Models\HyeongGyu_Project.Models.csproj", "{59937060-3B68-4522-B82F-379FE0E01BE4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HyeongGyu_Project.Models", "HyeongGyu_Project.Models\HyeongGyu_Project.Models.csproj", "{59937060-3B68-4522-B82F-379FE0E01BE4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HyeongGyu_Project.Models.Test", "HyeongGyu_Project.Models.Test\HyeongGyu_Project.Models.Test.csproj", "{20A64051-9AFA-4588-84D2-EFA3947E037C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HyeongGyu_Project.Models.Test", "HyeongGyu_Project.Models.Test\HyeongGyu_Project.Models.Test.csproj", "{20A64051-9AFA-4588-84D2-EFA3947E037C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HyeongGyu_Project.Apis", "HyeongGyu_Project.Apis\HyeongGyu_Project.Apis.csproj", "{CCE0AFED-9E8F-4C6C-AA8D-52AE16653D4A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HyeongGyu_Project.Apis", "HyeongGyu_Project.Apis\HyeongGyu_Project.Apis.csproj", "{CCE0AFED-9E8F-4C6C-AA8D-52AE16653D4A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HyeongGyu_Project.SingleSignOn", "HyeongGyu_Project.SingleSignOn\HyeongGyu_Project.SingleSignOn.csproj", "{715FD907-5AFE-4BFA-8A69-D227FDE42A0C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HyeongGyu_Project.SingleSignOn", "HyeongGyu_Project.SingleSignOn\HyeongGyu_Project.SingleSignOn.csproj", "{715FD907-5AFE-4BFA-8A69-D227FDE42A0C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

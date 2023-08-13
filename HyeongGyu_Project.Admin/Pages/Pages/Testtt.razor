@@ -1,0 +1,24 @@
+﻿@page "/Samples/Test"
+
+
+<strong>Table of Contents</strong>
+<ul>
+    @for (int i = 0; i < 10; i++)
+    {
+        <li><a href="@GetHref(i)">Header @i</a></li>
+    }
+</ul>
+
+@for (int i = 0; i < 10; i++)
+{
+    <h1 id="@GetId(i)">Header @i</h1>
+    @* @LoremNET.Lorem.Paragraph(wordCount: 30, sentenceCount: 10) *@
+}
+
+@* 👇 Integrate the component *@
+<AnchorNavigation />
+
+@code {
+    string GetId(int i) => "header-" + i;
+    string GetHref(int i) => "#" + GetId(i);
+}
