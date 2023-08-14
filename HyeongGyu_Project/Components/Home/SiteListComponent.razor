@@ -1,0 +1,29 @@
+﻿<ul>
+    @foreach(var site in siteList)
+    {
+        <li><a href="@site.Url" target="_blank">@site.Title (@site.Description)</a></li>
+    }
+</ul>
+
+@code {
+    private List<Site> siteList;
+
+    public List<Site> SiteList
+    {
+        get { return SiteList; }
+        set { SiteList = value; }
+    }
+
+    protected override void OnInitialized()
+    {
+        siteList = new List<Site>() {
+            new Site() { Id = 1, Title = "네이버" , Description = "검색사이트" , Url ="https://naver.com"}
+            ,new Site() { Id = 2, Title = "깃허브" , Description = "내깃허브사이트" , Url ="https://github.com/kjin0204"}
+            ,new Site() { Id = 3, Title = "velog" , Description = "내블로그" , Url ="https://velog.io/@kjin0202"}
+            ,new Site() { Id = 4, Title = "닷넷데브" , Description = "c# 관련 커뮤니티" , Url ="https://forum.dotnetdev.kr/"}
+        };
+
+    }
+
+
+}
