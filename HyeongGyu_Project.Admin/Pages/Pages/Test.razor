@@ -12,13 +12,14 @@
 @for (int i = 0; i < 10; i++)
 {
     <h1 id="@GetId(i)">Header @i</h1>
-    @* @LoremNET.Lorem.Paragraph(wordCount: 30, sentenceCount: 10) *@
+    @LoremNET.Lorem.Paragraph(wordCount: 30, sentenceCount: 10)
 }
 
 @* 👇 Integrate the component *@
 <AnchorNavigation />
 
 @code {
+    string routingPath = "/Samples/Test";
     string GetId(int i) => "header-" + i;
-    string GetHref(int i) => "#" + GetId(i);
+    string GetHref(int i) => $"{routingPath}#" + GetId(i);
 }
